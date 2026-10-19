@@ -13,11 +13,11 @@ def mostrar_tablero(tablero, ocultar_barcos=True):
 
     linea = "   "
     for i in range(N):
-        linea += str(i) + " "
+        linea += str(i+1) + " "
     print(linea)
 
     for i in range(N):
-        fila = str(i) + "  "
+        fila = str(i+1) + "  "
         for c in tablero[i]:
             if ocultar_barcos and c in ("B", "T", "H"):
                 fila += ". "
@@ -52,7 +52,7 @@ def colocar_barco(tablero, x, y, tamaño, horizontal):
             tablero[x][y+i] = "B"
     else:
         for i in range(tamaño):
-            tablero[x+i][y] = "B"
+            tablero[x+i][y] = "C"
 
 
 def colocar_barcos(tablero, lista_barcos):
@@ -77,6 +77,7 @@ def colocar_barcos(tablero, lista_barcos):
 
 
 print("1) Creando tablero...")
+print("esto es otro PRINT")
 tablero = crear_tablero(8)
 mostrar_tablero(tablero, ocultar_barcos=False)
 
