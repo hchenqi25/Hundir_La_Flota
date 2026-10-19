@@ -77,6 +77,7 @@ def colocar_barcos(tablero, lista_barcos):
 
 
 print("1) Creando tablero...")
+print("esto es otro PRINT")
 tablero = crear_tablero(8)
 mostrar_tablero(tablero, ocultar_barcos=False)
 
